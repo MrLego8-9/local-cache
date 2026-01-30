@@ -3964,7 +3964,7 @@ function run() {
                 const cachePath = core.getState('cache-path');
                 const path = core.getState('path');
                 yield (0, cache_1.exec)(`mkdir -p ${cachePath}`);
-                const mv = yield (0, cache_1.exec)(`mv ./${path} ${cachePath}`);
+                const mv = yield (0, cache_1.exec)(`mv ${path} ${cachePath}`);
                 core.debug(mv.stdout);
                 if (mv.stderr)
                     core.error(mv.stderr);
